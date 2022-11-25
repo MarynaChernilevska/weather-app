@@ -1,0 +1,49 @@
+.mainPage {
+  background: linear-gradient(
+    135deg,
+    rgb(151, 171, 255) 10%,
+    rgb(18, 53, 151) 100%
+  );
+  min-height: 100vh;
+}
+.container {
+  font-family: "Roboto", sans-serif;
+}
+.currentWeather h1 {
+  color: #fff;
+}
+
+.currentWeather h2 {
+  color: #9cc1ca;
+}
+.currentWeather {
+  text-align: center;
+  padding: 60px;
+}
+.weekWeather {
+  color: #fff;
+  text-align: center;
+  padding: 80px 0 0 0;
+}
+.temprature {
+  color: #9cc1ca;
+}
+.searchCity {
+  padding: 20px;
+}
+.mainIcon {
+  margin: 20px;
+}
+.icon {
+  margin: 10px;
+}
+#more {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: #5d5d5d;
+  font-weight: bold;
+}
+#location {
+  color: #fff;
+}
