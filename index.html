@@ -26,111 +26,140 @@
   <body>
     <div class="mainPage">
       <div class="container">
-        <div class="searchCity">
-          <form id="search-form">
-            <div class="input-group">
-              <input
-                type="text"
-                placeholder="Search for a city"
-                autocomplete="off"
-                autofocus="on"
-                id="search-text-input"
-                class="form-control"
+        <header>
+          <div class="searchCity">
+            <form id="search-form">
+              <div class="input-group">
+                <input
+                  type="text"
+                  placeholder="Search for a city"
+                  autocomplete="off"
+                  autofocus="on"
+                  id="search-text-input"
+                  class="form-control"
+                />
+                <input class="btn btn-secondary" type="submit" value="Search" />
+
+                <button class="btn btn-outline-secondary" id="location">
+                  Current
+                </button>
+              </div>
+            </form>
+          </div>
+        </header>
+        <section>
+          <div class="currentWeather">
+            <h1 id="city">Kyiv</h1>
+            <h2 id="degrees-temp">
+              <img
+                class="mainIcon"
+                src="images/rain.png"
+                alt="rain"
+                width="50"
               />
-              <input class="btn btn-secondary" type="submit" value="Search" />
+              12° <span id="temperatureMetrics">C</span>
+            </h2>
 
-              <button class="btn btn-outline-secondary" id="location">
-                Current
-              </button>
-            </div>
-          </form>
-        </div>
-        <div class="currentWeather">
-          <h1 id="city">Kyiv</h1>
-          <h2 id="degrees-temp">
-            <img class="mainIcon" src="images/rain.png" alt="rain" width="50" />
-            12° <span id="temperatureMetrics">C</span>
-          </h2>
+            <h2 id="date"></h2>
+            <ul id="more">
+              <li>
+                <span class="hum">Humidity:</span>
+                <span class="humid" id="humidity"></span>
+                <span class="percentage" id="percentage">%</span>
+              </li>
 
-          <h2 id="date"></h2>
-          <ul id="more">
-            <li>
-              <span class="hum">Humidity:</span>
-              <span class="humid" id="humidity"></span>
-              <span class="percentage" id="percentage">%</span>
-            </li>
+              <li>
+                <span class="wind-speed">Wind:</span>
+                <span class="wind" id="wind"></span>
+                <span class="km">Km/h</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section>
+          <div class="weekWeather">
+            <div class="days">
+              <div class="row">
+                <div class="col-2">
+                  <div>Mon</div>
+                  <img
+                    class="icon"
+                    src="images/storm.png"
+                    alt="storm"
+                    width="30"
+                  />
+                  <div class="temprature">12</div>
+                </div>
+                <div class="col-2">
+                  <div>Tue</div>
+                  <img
+                    class="icon"
+                    src="images/cloudy.png"
+                    alt="cloudy"
+                    width="30"
+                  />
+                  <div class="temprature">8</div>
+                </div>
+                <div class="col-2">
+                  <div>Wed</div>
+                  <img
+                    class="icon"
+                    src="images/rain.png"
+                    alt="rain"
+                    width="30"
+                  />
+                  <div class="temprature">9</div>
+                </div>
 
-            <li>
-              <span class="wind-speed">Wind:</span>
-              <span class="wind" id="wind"></span>
-              <span class="km">Km/h</span>
-            </li>
-          </ul>
-        </div>
-        <div class="weekWeather">
-          <div class="days">
-            <div class="row">
-              <div class="col-2">
-                <div>Mon</div>
-                <img
-                  class="icon"
-                  src="images/storm.png"
-                  alt="storm"
-                  width="30"
-                />
-                <div class="temprature">12</div>
-              </div>
-              <div class="col-2">
-                <div>Tue</div>
-                <img
-                  class="icon"
-                  src="images/cloudy.png"
-                  alt="cloudy"
-                  width="30"
-                />
-                <div class="temprature">8</div>
-              </div>
-              <div class="col-2">
-                <div>Wed</div>
-                <img class="icon" src="images/rain.png" alt="rain" width="30" />
-                <div class="temprature">9</div>
-              </div>
-
-              <div class="col-2">
-                <div>Thu</div>
-                <img
-                  class="icon"
-                  src="images/cloud.png"
-                  alt="cloud"
-                  width="30"
-                />
-                <div class="temprature">10</div>
-              </div>
-              <div class="col-2">
-                <div>Fri</div>
-                <img
-                  class="icon"
-                  src="images/thunderstorm.png"
-                  alt="storm"
-                  width="30"
-                />
-                <div class="temprature">8</div>
-              </div>
-              <div class="col-2">
-                <div>Sat</div>
-                <img
-                  class="icon"
-                  src="images/storm.png"
-                  alt="storm"
-                  width="30"
-                />
-                <div class="temprature">9</div>
+                <div class="col-2">
+                  <div>Thu</div>
+                  <img
+                    class="icon"
+                    src="images/cloud.png"
+                    alt="cloud"
+                    width="30"
+                  />
+                  <div class="temprature">10</div>
+                </div>
+                <div class="col-2">
+                  <div>Fri</div>
+                  <img
+                    class="icon"
+                    src="images/thunderstorm.png"
+                    alt="storm"
+                    width="30"
+                  />
+                  <div class="temprature">8</div>
+                </div>
+                <div class="col-2">
+                  <div>Sat</div>
+                  <img
+                    class="icon"
+                    src="images/storm.png"
+                    alt="storm"
+                    width="30"
+                  />
+                  <div class="temprature">9</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </div>
+
+    <footer class="links">
+      This project was coded by Maryna Chernilevska and is
+      <a href="https://github.com/MarynaChernilevska/weather-app" class="href"
+        >open-soursed on GitHub</a
+      >
+      and
+      <a
+        href="https://app.netlify.com/sites/sage-zabaione-5ede2e/overview"
+        class="href"
+        >hosted on Netlify</a
+      >
+    </footer>
     <script src="src/index.js"></script>
   </body>
 </html>
