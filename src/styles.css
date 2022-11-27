@@ -47,3 +47,14 @@
 #location {
   color: #fff;
 }
+.links {
+  text-align: center;
+  margin-top: 40px;
+  color: #5d5d5d;
+}
+.link {
+  color: #9cc1ca;
+}
+.link:hover {
+  color: #fff;
+}
