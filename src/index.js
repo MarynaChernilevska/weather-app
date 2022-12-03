@@ -39,11 +39,13 @@ function showWeather(response) {
   let temperature = Math.round(response.data.main.temp);
   city.innerHTML = `${response.data.name}`;
   let temp = document.querySelector("#degrees-temp");
-  temp.innerHTML = `${temperature}°`;
+  temp.innerHTML = `${temperature}`;
   let humid = document.querySelector("#humidity");
   humid.innerHTML = response.data.main.humidity;
   let wind = document.querySelector("#wind");
   wind.innerHTML = Math.round(response.data.wind.speed);
+  let sky = document.querySelector("#sky");
+  sky.innerHTML = response.data.weather[0].main;
 }
 
 function handlePosition(position) {
