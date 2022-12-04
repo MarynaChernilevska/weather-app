@@ -53,20 +53,21 @@
             <div class="overview">
               <ul id="mainInfo">
                 <li id="city">Kyiv</li>
-                <li id="date"></li>
-                <li id="sky">Clouds</li>
+                <li class="date">
+                  Last updated:
+                  <span class="date" id="date"></span>
+                </li>
+                <li id="weatherDeskription">Clouds</li>
               </ul>
             </div>
-            <div class="d-flex weather-temperature">
-              <div>
-                <img
-                  id="mainIcon"
-                  src="images/rain.png"
-                  alt="rain"
-                  width="50"
-                />
+            <div class="d-flex weather-temperature mainLine">
+              <div class="d-flex weather-temperature">
+                <img id="mainIcon" src="images/rain.png" alt="rain" />
                 <strong id="degrees-temp">12</strong>
-                <span id="units">°C | °F</span>
+                <span id="units">
+                  <span class="celcium">°C </span>|
+                  <span id="fargh">°F</span></span
+                >
               </div>
               <div>
                 <ul id="more">

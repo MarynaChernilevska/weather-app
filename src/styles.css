@@ -17,22 +17,28 @@
 .overview {
   margin-bottom: 20px;
 }
+.mainLine {
+  padding: 0px 65px;
+}
 .weather-temperature {
   justify-content: space-between;
+  align-items: center;
 }
 .d-flex img {
-  height: 64px;
-  width: 64px;
+  height: 100px;
+  width: 100px;
 }
 .d-flex #degrees-temp {
   color: #5d5d5d;
   font-size: 64px;
   font-weight: 400;
+  padding-left: 10px;
 }
 .d-flex #units {
   position: relative;
   font-size: 16px;
-  top: 17px;
+  top: -17px;
+  color: #5d5d5d;
 }
 #mainInfo {
   list-style-type: none;
@@ -45,11 +51,12 @@
   font-weight: bold;
   font-size: 45px;
 }
-#date {
+.date {
   color: #9cc1ca;
   font-size: 25px;
 }
-#sky {
+
+#weatherDeskription {
   color: #9cc1ca;
   font-size: 20px;
 }
@@ -69,9 +76,7 @@
 .searchCity {
   padding: 30px 60px;
 }
-#mainIcon {
-  margin: 30px;
-}
+
 .icon {
   margin: 10px;
 }
@@ -79,6 +84,8 @@
   list-style-type: none;
   color: #5d5d5d;
   font-weight: bold;
+  margin: 0;
+  padding: 0;
 }
 #location {
   color: #fff;

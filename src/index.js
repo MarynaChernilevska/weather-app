@@ -44,8 +44,16 @@ function showWeather(response) {
   humid.innerHTML = response.data.main.humidity;
   let wind = document.querySelector("#wind");
   wind.innerHTML = Math.round(response.data.wind.speed);
-  let sky = document.querySelector("#sky");
-  sky.innerHTML = response.data.weather[0].main;
+  let weatherDeskriptionElement = document.querySelector("#weatherDeskription");
+  let weatherDeskription = response.data.weather[0].description;
+  weatherDeskriptionElement.innerHTML =
+    weatherDeskription.charAt(0).toUpperCase() + weatherDeskription.slice(1);
+  let iconElement = document.querySelector("#mainIcon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function handlePosition(position) {
