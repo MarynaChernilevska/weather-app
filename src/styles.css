@@ -101,3 +101,11 @@
 .link:hover {
   color: #fff;
 }
+a.active {
+  color: rgb(32, 31, 82);
+  cursor: default;
+  text-decoration: none;
+}
+a.active:hover {
+  text-decoration: none;
+}

@@ -34,12 +34,20 @@ function searchCity(searchInput) {
   axios.get(apiUrl).then(showWeather);
 }
 
+searchCity("Kyiv");
+
 function showWeather(response) {
   let city = document.querySelector("#city");
+  celsiusTemperature = response.data.main.temp;
+
   let temperature = Math.round(response.data.main.temp);
   city.innerHTML = `${response.data.name}`;
   let temp = document.querySelector("#degrees-temp");
-  temp.innerHTML = `${temperature}`;
+  if (isCelsius) {
+    temp.innerHTML = `${temperature}`;
+  } else {
+    temp.innerHTML = `${Math.round(calculateFarengheit(temperature))}`;
+  }
   let humid = document.querySelector("#humidity");
   humid.innerHTML = response.data.main.humidity;
   let wind = document.querySelector("#wind");
@@ -71,3 +79,36 @@ function getCurrentLocation(event) {
 }
 let currentLocationbutton = document.querySelector("button");
 currentLocationbutton.addEventListener("click", getCurrentLocation);
+
+function activateFarengheit(event) {
+  event.preventDefault();
+  isCelsius = false;
+  celsiumElement.classList.remove("active");
+  farghElement.classList.add("active");
+  temperatureElement.innerHTML = Math.round(
+    calculateFarengheit(celsiusTemperature)
+  );
+}
+
+function activateCelsius(event) {
+  event.preventDefault();
+  isCelsius = true;
+  celsiumElement.classList.add("active");
+  farghElement.classList.remove("active");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+function calculateFarengheit(celsiusTemperature) {
+  return (celsiusTemperature * 9) / 5 + 32;
+}
+
+let celsiusTemperature = null;
+let isCelsius = true;
+
+const temperatureElement = document.querySelector("#degrees-temp");
+
+const farghElement = document.querySelector("#fargh");
+farghElement.addEventListener("click", activateFarengheit);
+
+const celsiumElement = document.querySelector("#celcium");
+celsiumElement.addEventListener("click", activateCelsius);
