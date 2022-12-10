@@ -63,8 +63,6 @@ function displayForecast(response) {
 
 function getForecast(coordinates) {
   console.log(coordinates);
-
-  // let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric`;
   https: axios.get(apiUrl).then(displayForecast);
 }
@@ -80,7 +78,6 @@ form.addEventListener("submit", search);
 
 function searchCity(searchInput) {
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${searchInput}&key=${apiKey}&units=metric`;
-  // let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
 }
 
@@ -116,11 +113,8 @@ function displayTemperature(response) {
 function handlePosition(response) {
   let latitude = response.coords.latitude;
   let longitude = response.coords.longitude;
-
-  // let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
   let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=metric`;
-
-  https: axios.get(apiUrl).then(displayTemperature);
+  axios.get(apiUrl).then(displayTemperature);
 }
 
 function getCurrentLocation(event) {
