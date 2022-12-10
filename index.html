@@ -52,7 +52,7 @@
           <div class="currentWeather">
             <div class="overview">
               <ul id="mainInfo">
-                <li id="city">Kyiv</li>
+                <li id="city"></li>
                 <li class="date">
                   Last updated:
                   <span class="date" id="date"></span>
@@ -63,7 +63,7 @@
             <div class="d-flex weather-temperature mainLine">
               <div class="d-flex weather-temperature">
                 <img id="mainIcon" src="images/rain.png" alt="rain" />
-                <strong id="degrees-temp">12</strong>
+                <strong id="degrees-temp"></strong>
                 <span id="units">
                   <a href="#" id="celcium" class="active">°C </a> |
                   <a href="#" id="fargh">°F</a></span
@@ -88,73 +88,7 @@
           </div>
         </section>
         <section>
-          <div class="weekWeather">
-            <div class="days">
-              <div class="row">
-                <div class="col-2">
-                  <div>Mon</div>
-                  <img
-                    class="icon"
-                    src="images/storm.png"
-                    alt="storm"
-                    width="30"
-                  />
-                  <div class="temprature" id="monday">12</div>
-                </div>
-                <div class="col-2">
-                  <div>Tue</div>
-                  <img
-                    class="icon"
-                    src="images/cloudy.png"
-                    alt="cloudy"
-                    width="30"
-                  />
-                  <div class="temprature" id="tuesday">8</div>
-                </div>
-                <div class="col-2">
-                  <div>Wed</div>
-                  <img
-                    class="icon"
-                    src="images/rain.png"
-                    alt="rain"
-                    width="30"
-                  />
-                  <div class="temprature" id="wednesday">9</div>
-                </div>
-
-                <div class="col-2">
-                  <div>Thu</div>
-                  <img
-                    class="icon"
-                    src="images/cloud.png"
-                    alt="cloud"
-                    width="30"
-                  />
-                  <div class="temprature" id="thursday">10</div>
-                </div>
-                <div class="col-2">
-                  <div>Fri</div>
-                  <img
-                    class="icon"
-                    src="images/thunderstorm.png"
-                    alt="storm"
-                    width="30"
-                  />
-                  <div class="temprature" id="friday">8</div>
-                </div>
-                <div class="col-2">
-                  <div>Sat</div>
-                  <img
-                    class="icon"
-                    src="images/storm.png"
-                    alt="storm"
-                    width="30"
-                  />
-                  <div class="temprature">9</div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="weather-forecast" id="forecast"></div>
         </section>
       </div>
 

@@ -65,13 +65,20 @@
   text-align: center;
   /* padding: 0 15px 60px; */
 }
-.weekWeather {
-  color: #fff;
+.weather-forecast {
+  color: #000;
   text-align: center;
-  padding: 80px 0 0 0;
+  margin-top: 20px;
 }
-.temprature {
-  color: #9cc1ca;
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.6;
+}
+.weather-forecast-temperature {
+  font-size: 14px;
+}
+.weather-forecast-temperature-min {
+  opacity: 0.6;
 }
 .searchCity {
   padding: 30px 60px;
